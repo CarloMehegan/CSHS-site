@@ -10,8 +10,8 @@
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/Account" right>Account</b-nav-item>
-          <b-nav-item to="/SignIn" right>Sign In</b-nav-item>
+          <b-nav-item to="/Account" >Account</b-nav-item>
+          <b-nav-item to="/SignIn" >Sign In</b-nav-item>
         </b-navbar-nav>
 
       </b-navbar>

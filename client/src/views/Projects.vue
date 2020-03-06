@@ -64,9 +64,6 @@
         </b-card-body>
 
         <b-list-group flush>
-          <b-list-group-item>LÖVE2D</b-list-group-item>
-          <b-list-group-item>Game</b-list-group-item>
-          <b-list-group-item>Programming & Design</b-list-group-item>
           <b-list-group-item>Arcade</b-list-group-item>
         </b-list-group>
 
@@ -177,8 +174,6 @@
         <b-list-group flush>
           <b-list-group-item>LÖVE2D</b-list-group-item>
           <b-list-group-item>Game</b-list-group-item>
-          <b-list-group-item>Programming & Design</b-list-group-item>
-          <b-list-group-item>Arcade</b-list-group-item>
         </b-list-group>
 
         <b-card-body>
@@ -303,6 +298,7 @@
 .projectcard {
   min-width: 300px;
   max-width: 300px;
+  
 }
 
 </style>
