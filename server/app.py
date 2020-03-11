@@ -18,7 +18,8 @@ def get_tasks():
             'name': "Aiden Kennedy",
             'createDate':"10.10.10",
             'info':"This is a test of wether or not we can pull from an api",
-            'uploadDate':"12-12-12"
+            'uploadDate':"12-12-12",
+            'tags': ['python', 'java', 'space']
         },
         {
             '_id': 2,
@@ -26,7 +27,8 @@ def get_tasks():
             'name': "Carlo Megehan",
             'createDate':"6.9.42",
             'info':"Test fo' 2 cards",
-            'uploadDate':"3.15.14"
+            'uploadDate':"3.15.14",
+            'tags': ['python', 'java', 'space', 'horror', 'arcade']
         }
     )
 
