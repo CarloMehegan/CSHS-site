@@ -15,19 +15,15 @@
           info="this is a test of our project component" 
           uploadDate="1-1-1" 
         />
-        <!-- <Project
-          v-if="loaded"
-          class="mx-auto"
-          title="projects[projects.length-1].data.title"
-          name=projects[projects.length-1].data.name
-          createDate=this.projects[projects.length-1].data.createDate
-          info=this.projects[projects.length-1].data.info
-          uploadDate=this.projects[projects.length-1].data.uploadDate
-        /> -->
         <Project
-          v-for="project in projects"
-          v-bind:key="project.id"
-          v-bind:name="project.name"
+          v-for="p in projects"
+          class="mx-auto"
+          v-bind:key="p._id"
+          :title="p.title"
+          :name="p.name"
+          :createDate="p.createDate"
+          :info="p.info"
+          :uploadDate="p.uploadDate"
         />
       </b-card-group>
     </div>
@@ -48,18 +44,33 @@ export default {
   data() {
     return {
       loaded: false,
-      projects: [
-      ],
+      projects: [],
     }
   },
   methods: {
     get: function () {
       axios.get(URL + "/api/v1.0/card")
         .then(response => {
-          this.projects.push(response)
-          console.log(this.projects[this.projects.length - 1].data)
-          this.loaded = true
-          this.projects[this.projects.length - 1].id = this.projects.length - 1
+          // let res1 = [
+          //   {
+          //     "id": 1,
+          //     "name": "Hello"
+          //   },
+          //   {
+          //     "id": 2,
+          //     "name": "World"
+          //   }
+          // ]
+          console.log(response);
+          for(var i = 0; i < response.data.length; i++) {
+            this.projects.push(response.data[i])
+          }
+          
+          
+          // this.projects.push(response)
+          // console.log(this.projects[this.projects.length - 1].data)
+          // this.loaded = true
+          // this.projects[this.projects.length - 1].id = this.projects.length - 1
         })
     },
   }
