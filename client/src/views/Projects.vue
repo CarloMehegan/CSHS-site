@@ -22,7 +22,7 @@
 import axios from "axios"
 import Project from '@/components/ProjectComponent'
 
-const URL = "http://10.40.17.230:5000"
+const URL = "http://localhost:5000"
 
 export default {
   name:'Projects',
