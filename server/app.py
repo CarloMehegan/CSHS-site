@@ -26,27 +26,17 @@ def api_all():
 
     return jsonify(all_posts)
 
-def upload_post(values):
-    conn = sqlite3.connect('posts.db')
+#heres that stuff that wont work
+# @app.route('/api/v1.0/uploadpost', methods=['GET, POST'])
+# def api_post():
+#     conn = sqlite3.connect('posts.db')
+#     cur = conn.cursor()
+#     sqlthing = '''INSERT INTO Posts (name, title, createDate, uploadDate, info) VALUES (?,?,?,?,?)'''
+#     val = ('John', 'Highway 21', '1-2-3', '5-30-20', 'bruh moment pog')
+#     cur.execute(sqlthing, val)
+#     # conn.commit()
 
-    print ("Opened database successfully")
-
-    command = "INSERT INTO Posts (name, title, createDate, uploadDate, info) VALUES (?,?,?,?,?)"
-    conn.execute(command, values )
-
-    conn.commit()
-
-    print("Records created successfully with title: " + values[0])
-    conn.close()
-    
-
-@app.route('/postmethod', methods=['GET','POST'])
-def create_user():
-    data = request.get_json() or {}
-    # print(data['post_data'])
-    upload_post(data['post_data'])
-    return 'yes sirr'
-
-
+#     return cur.lastrowid
+ 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
