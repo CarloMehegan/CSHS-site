@@ -12,8 +12,7 @@
             <b-form-input
                 class="w-25"
                 v-model="title"
-                @focus="clearStatus"
-                @keypress="clearStatus"
+                
             />
             <br>
             <label>Name</label>
@@ -21,8 +20,7 @@
             <b-form-input
                 class="w-25"
                 v-model="name"
-                @focus="clearStatus"
-                @keypress="clearStatus"
+                
             />
             <br>
             <label>Date of Creation</label>
@@ -30,8 +28,7 @@
             <b-form-input
                 class="w-25"
                 v-model="createDate"
-                @focus="clearStatus"
-                @keypress="clearStatus"
+                
             />
             <br>
             <label>Date of Upload</label>
@@ -39,8 +36,7 @@
             <b-form-input
                 class="w-25"
                 v-model="uploadDate"
-                @focus="clearStatus"
-                @keypress="clearStatus"
+                
             />
             <br>
             <label>Info about your project</label>
@@ -49,8 +45,6 @@
                 class="w-25"
                 v-model="info"
                 rows="12"
-                @focus="clearStatus"
-                @keypress="clearStatus"
             />
             <b-button
                 v-on:click="submit"
@@ -63,6 +57,9 @@
     </div>
 </template>
 <script>
+import axios from "axios"
+const URL = "http://localhost:5000"
+
 export default {
   name: "create",
   components:{
@@ -79,8 +76,18 @@ export default {
   methods: {
       submit: function(){
           //this is where the upload/creating new post goes
-          console.log(this.title, this.name, this.createDate, this.uploadDate, this.info)
+          var post_data = [this.title, this.name, this.createDate, this.uploadDate, this.info]
+          axios.post(URL + "/postmethod", {
+              post_data
+          })
+          .then(function (response) {
+              console.log(response);
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+          
       }
   }
-}
+};
 </script>
