@@ -41,7 +41,7 @@ def upload_post(values):
     
 
 @app.route('/postmethod', methods=['GET','POST'])
-def create_user():
+def create_post():
     data = request.get_json() or {}
     # print(data['post_data'])
     upload_post(data['post_data'])
