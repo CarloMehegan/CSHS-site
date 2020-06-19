@@ -50,7 +50,7 @@
                 v-on:click="submit"
                 variant="outline-primary"
                 class="w-25"
-            >Submit
+            >Submit (yes it really will)
             </b-button>
         </b-form-group>
         </center>

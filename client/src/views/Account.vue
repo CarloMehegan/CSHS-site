@@ -1,7 +1,7 @@
 <template>
   <div class="about">
-    <h1>mmm yummy</h1>
-    <p>I love computer science mmm so gooood</p>
+    <h1>your profile</h1>
+    <p>account info here and also ignore the stuff below</p>
     <HelloWorld Hi />
   </div>
 </template>
