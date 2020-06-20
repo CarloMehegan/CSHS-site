@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <b-button v-on:click="get()">Click Me to Send API Request</b-button>
-
+    <!-- <b-button v-on:click="get()">Click Me to Send API Request</b-button> -->
+    <p>here we''ll have info and stuff</p>
 
   </div>
 </template>

@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     get: function () {
-      axios.get(URL + "/api/v1.0/card")
+      axios.get(URL + "/api/v1.0/posts")
         .then(response => {
           console.log(response);
           for(var i = 0; i < response.data.length; i++) {
