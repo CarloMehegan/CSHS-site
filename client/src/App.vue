@@ -28,7 +28,7 @@
       <!-- Modal Content -->
       <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
-          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          <img src="assets/logo.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
@@ -46,7 +46,7 @@
 
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+          <span class="psw"><a href="#">Forgot password?</a></span>
         </div>
       </form>
     </div>
@@ -141,7 +141,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5px auto; /* 15% from the top and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 340px; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -184,7 +184,7 @@ span.psw {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
 }
 
@@ -201,3 +201,7 @@ span.psw {
   color: #42b983;
 }
 </style>
+
+label {
+  font-weight: 600;
+}
